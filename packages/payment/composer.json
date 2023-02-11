@@ -1,0 +1,39 @@
+{
+    "name": "magical/payment",
+    "description": "A laravel package for multiple payment gateway.",
+    "keywords": ["payment", "paypal", "himalayan bank", "nic asia"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Padam Shankhadev",
+            "email": "shankhadev123@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "srmklive/paypal": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Magical\\Payment\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Magical\\Payment\\PaymentServiceProvider"
+            ],
+            "aliases": {
+				"Payment": "Magical\\Payment\\Facades\\Payment"
+			},
+            "branch-alias": {
+                "dev-master": "dev-main"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
